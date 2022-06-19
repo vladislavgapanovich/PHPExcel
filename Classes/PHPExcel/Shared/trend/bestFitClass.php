@@ -415,11 +415,10 @@ class PHPExcel_Best_Fit
         } elseif ($nY != $nX) {
             //    Ensure both arrays of points are the same size
             $this->error = true;
-            return false;
+        } else {
+            $this->valueCount = $nY;
+            $this->xValues = $xValues;
+            $this->yValues = $yValues;
         }
-
-        $this->valueCount = $nY;
-        $this->xValues = $xValues;
-        $this->yValues = $yValues;
     }
 }
